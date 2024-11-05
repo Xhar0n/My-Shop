@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Shop</h1>
+        <div class="cart">
+            <button onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Products</h2>
+        <div class="product-list">
+            <div class="product" data-id="1" data-name="Product 1" data-price="19.99">
+                <h3>Product 1</h3>
+                <p>Price: $19.99</p>
+                <button onclick="addToCart(1)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2" data-name="Product 2" data-price="29.99">
+                <h3>Product 2</h3>
+                <p>Price: $29.99</p>
+                <button onclick="addToCart(2)">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3" data-name="Product 3" data-price="9.99">
+                <h3>Product 3</h3>
+                <p>Price: $9.99</p>
+                <button onclick="addToCart(3)">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <aside id="cart-sidebar">
+        <h3>Your Cart</h3>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
